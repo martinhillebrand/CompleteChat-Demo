@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+
+# IDEs
+.idea/
+.vscode/
+
+# Python / uv
+__pycache__/
+.python-version
+uv.lock
+*.pyc
+*.pyo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Build / dist
+build/
+dist/
+*.egg-info/

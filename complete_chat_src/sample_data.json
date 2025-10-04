@@ -1,0 +1,52 @@
+{
+  "text_classification": {
+    "prompt": "Classify the following text into one of the predefined categories: ['IT Support', 'HR Request', 'Marketing', 'System Notification', 'Procurement']. Respond in JSON with keys 'category' and 'confidence': ",
+    "data": [
+      [1, "Customer reported a payment failure while using the mobile app."],
+      [2, "Employee requests additional training resources for new software."],
+      [3, "Website traffic increased after launching the new marketing campaign."],
+      [4, "System alert: Database backup completed successfully."],
+      [5, "Supplier submitted an invoice for Q3 materials."]
+    ]
+  },
+  "sentiment_analysis": {
+    "prompt": "Analyze the sentiment of the following text. Respond in JSON with keys 'sentiment' (positive, neutral, negative) and 'confidence': ",
+    "data": [
+      [1, "The new feature is fantastic! It saves me so much time."],
+      [2, "I’m disappointed with the quality of the product I received."],
+      [3, "Customer support was okay, but response time could be faster."],
+      [4, "The app crashes every time I try to upload a file."],
+      [5, "Everything worked as expected, no issues at all."]
+    ]
+  },
+  "summarization": {
+    "prompt": "Summarize the following text in one concise sentence: ",
+    "data": [
+      [1, "The quarterly report highlights strong growth in the Asia-Pacific region driven by increased demand for renewable energy solutions."],
+      [2, "The city council approved a new public transportation plan that aims to reduce emissions and improve commute times."],
+      [3, "After months of negotiations, the company announced a merger that will expand its presence in the European market."],
+      [4, "Researchers discovered a promising compound that may significantly improve cancer treatment outcomes."],
+      [5, "A severe storm caused widespread power outages, prompting emergency services to work around the clock."]
+    ]
+  },
+  "named_entity_recognition": {
+    "prompt": "Extract all named entities (people, organizations, locations, dates, products) from the following text. Respond in JSON with lists under each entity type: ",
+    "data": [
+      [1, "Apple Inc. announced a new partnership with the University of Cambridge in the United Kingdom."],
+      [2, "John Smith joined Tesla as Director of Supply Chain Operations in June 2022."],
+      [3, "The European Central Bank raised interest rates by 0.5% last Thursday."],
+      [4, "Pfizer’s COVID-19 vaccine received full FDA approval in August 2021."],
+      [5, "Amazon opened a new fulfillment center in Dallas, Texas to improve delivery times."]
+    ]
+  },
+  "translation": {
+    "prompt": "Translate the following text into English: ",
+    "data": [
+      [1, "Der Kunde war mit dem Service sehr zufrieden."],
+      [2, "El informe financiero será presentado mañana."],
+      [3, "Le produit a été livré en retard."],
+      [4, "日本の市場は急速に成長しています。"],
+      [5, "Il progetto sarà completato entro la fine dell’anno."]
+    ]
+  }
+}
