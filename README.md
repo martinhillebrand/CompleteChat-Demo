@@ -18,6 +18,7 @@ with each AMP making parallel API calls to process its data partition. This impl
 - Sign up or log in to your account
 - Navigate to API Keys section
 - Create a new API key
+- Be sure you have some balance (It'll only consume very little, but you need to have 1 USD or so)
 
 ### 3. Run
 Run the demo notebook.
