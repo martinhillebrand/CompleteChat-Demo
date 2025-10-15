@@ -1,6 +1,6 @@
 {
   "text_classification": {
-    "prompt": "Classify the following text into one of the predefined categories: ['IT Support', 'HR Request', 'Marketing', 'System Notification', 'Procurement']. Respond in JSON with keys 'category' and 'confidence': ",
+    "prompt": "Classify text. Categories: IT Support, HR Request, Marketing, System Notification, Procurement. Return: category|confidence (confidence as Decimal between 0.00 and 1.00, two digits)",
     "data": [
       [1, "Customer reported a payment failure while using the mobile app."],
       [2, "Employee requests additional training resources for new software."],
@@ -10,43 +10,43 @@
     ]
   },
   "sentiment_analysis": {
-    "prompt": "Analyze the sentiment of the following text. Respond in JSON with keys 'sentiment' (positive, neutral, negative) and 'confidence': ",
+    "prompt": "Analyze sentiment. Return: sentiment|confidence (positive/neutral/negative) (confidence as Decimal between 0.00 and 1.00, two digits)",
     "data": [
       [1, "The new feature is fantastic! It saves me so much time."],
-      [2, "I’m disappointed with the quality of the product I received."],
+      [2, "I'm disappointed with the quality of the product I received."],
       [3, "Customer support was okay, but response time could be faster."],
       [4, "The app crashes every time I try to upload a file."],
       [5, "Everything worked as expected, no issues at all."]
     ]
   },
   "summarization": {
-    "prompt": "Summarize the following text in one concise sentence: ",
+    "prompt": "Summarize in ten words or less.",
     "data": [
-      [1, "The quarterly report highlights strong growth in the Asia-Pacific region driven by increased demand for renewable energy solutions."],
-      [2, "The city council approved a new public transportation plan that aims to reduce emissions and improve commute times."],
-      [3, "After months of negotiations, the company announced a merger that will expand its presence in the European market."],
-      [4, "Researchers discovered a promising compound that may significantly improve cancer treatment outcomes."],
-      [5, "A severe storm caused widespread power outages, prompting emergency services to work around the clock."]
+      [1, "The quarterly report highlights strong growth in the Asia-Pacific region driven by increased demand for renewable energy solutions. Sales teams exceeded their targets by 23% compared to the previous quarter. Market analysts attribute this success to strategic partnerships formed earlier in the year. The company plans to invest additional resources into expanding operations in Southeast Asian markets. Leadership expressed optimism about maintaining this momentum through the remainder of the fiscal year."],
+      [2, "The city council approved a new public transportation plan that aims to reduce emissions and improve commute times for residents. The initiative includes the addition of 50 electric buses to the existing fleet over the next two years. Council members debated the proposal for three months before reaching a unanimous decision. Environmental groups praised the plan as a significant step toward achieving the city's carbon neutrality goals. Implementation is scheduled to begin in the first quarter of next year."],
+      [3, "After months of negotiations, the company announced a merger that will expand its presence in the European market significantly. The deal is valued at approximately $2.3 billion and is expected to close by the end of the fiscal quarter. Both companies' boards of directors voted unanimously in favor of the merger. Industry experts suggest this move will create the third-largest player in the European technology sector. Employees from both organizations will undergo integration training starting next month."],
+      [4, "Researchers discovered a promising compound that may significantly improve cancer treatment outcomes for patients with advanced-stage disease. The compound showed a 67% success rate in early clinical trials involving 200 participants. Scientists believe it works by targeting a specific protein pathway that cancer cells use to evade the immune system. The pharmaceutical company funding the research plans to begin Phase III trials within six months. If successful, the treatment could receive regulatory approval within three to five years."],
+      [5, "A severe storm caused widespread power outages across three counties, prompting emergency services to work around the clock to restore essential services. More than 150,000 households were left without electricity as high winds damaged power lines and transformer stations. Emergency shelters were opened at community centers to provide refuge for displaced residents. Utility companies deployed additional crews from neighboring states to expedite restoration efforts. Officials estimate it may take up to a week to fully restore power to all affected areas."]
     ]
   },
   "named_entity_recognition": {
-    "prompt": "Extract all named entities (people, organizations, locations, dates, products) from the following text. Respond in JSON with lists under each entity type: ",
+    "prompt": "Extract named entities and return ONLY this format: people|organizations|locations|dates|products. Rules: (1) Use pipe '|' between fields (2) Use semicolon ';' for multiple items in one field (3) Empty fields = write 'NONE' (4) No extra text. Example: 'Jane Doe|Microsoft;OpenAI|Seattle|March 2024|Azure'. Example with empty fields: 'NONE|Tesla|Texas|NONE|NONE'",
     "data": [
       [1, "Apple Inc. announced a new partnership with the University of Cambridge in the United Kingdom."],
       [2, "John Smith joined Tesla as Director of Supply Chain Operations in June 2022."],
       [3, "The European Central Bank raised interest rates by 0.5% last Thursday."],
-      [4, "Pfizer’s COVID-19 vaccine received full FDA approval in August 2021."],
+      [4, "Pfizer's COVID-19 vaccine received full FDA approval in August 2021."],
       [5, "Amazon opened a new fulfillment center in Dallas, Texas to improve delivery times."]
     ]
   },
   "translation": {
-    "prompt": "Translate the following text into English: ",
+    "prompt": "Translate to English.",
     "data": [
       [1, "Der Kunde war mit dem Service sehr zufrieden."],
       [2, "El informe financiero será presentado mañana."],
       [3, "Le produit a été livré en retard."],
       [4, "日本の市場は急速に成長しています。"],
-      [5, "Il progetto sarà completato entro la fine dell’anno."]
+      [5, "Il progetto sarà completato entro la fine dell'anno."]
     ]
   }
 }
